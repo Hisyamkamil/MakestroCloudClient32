@@ -1,0 +1,27 @@
+{
+    "name": "MakestroCloudClient",
+    "version": "0.0.1",
+    "frameworks": "arduino",
+    "platforms": "espressif32",
+    "keywords": "makestro, makestrocloud, cloud, mqtt",
+    "description": "Client for cloud.makestro.com using ESP32 Development Board",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Hisyamkamil/MakestroCloudClient32.git"
+    },
+    "authors": [
+      {
+        "name": "Hisyam Kamil Chandrazaman",
+        "email": "hisyam@dycode.com"
+      }
+    ],
+    "dependencies": [
+      {
+        "name": "pubsubclient"
+      },
+      {
+        "name": "ArduinoJson"
+      }
+    ]
+  }
+  

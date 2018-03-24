@@ -35,9 +35,10 @@ void setup(){
     Serial.println("WiFi connected");
     Serial.println("IP address: ");
     Serial.println(WiFi.localIP());
-    delay(3000);
+    delay(3000);   
     makestro.connect(username, token, project, clientId);
-    delay(5000);    
+    delay(1000);
+        
 }
 
 void loop(){
