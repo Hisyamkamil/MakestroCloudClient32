@@ -4,7 +4,7 @@
 #define use_ESPectro32 1
 
 #if use_ESPectro32
-    #include <ESPectro32_board.h>
+    #include <ESPectro32_Board.h>
 #endif
 
 const char* SSID = "Your SSID";
