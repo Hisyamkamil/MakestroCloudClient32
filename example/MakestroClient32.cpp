@@ -18,7 +18,7 @@ const char* token = "Your Token";
 const char* project = "Your Project Name";
 const char* deviceId = "Your Device ID";
 const char* topic = "Your Topic";
-const char* subsTopic = "Your Topic";
+const char* subsTopic = "Your Subscribe Topic";
 
 MakestroCloudClient32 makestro;
 
