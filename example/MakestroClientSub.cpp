@@ -8,8 +8,6 @@
 #endif
 
 const int ledPin = 15;
-const int sendPeriod = 1000;
-unsigned long oldTime = 0;
 
 const char* SSID = "Your SSID";
 const char* Password = "Your SSID Password";
@@ -17,7 +15,6 @@ const char* username = "Your User Name";
 const char* token = "Your Token";
 const char* project = "Your Project Name";
 const char* deviceId = "Your Device ID";
-const char* topic = "Your Topic";
 const char* subsTopic = "Your Topic";
 
 MakestroCloudClient32 makestro;
@@ -69,13 +66,4 @@ void loop(){
         makestro.subscribe(subsTopic);
     }
     makestro.loop();
-
-    if(millis() - oldTime > sendPeriod){
-        oldTime = millis();
-        int phototr = ESPectro32.readPhotoTransistorValue();
-        Serial.print("phototr: ");
-        Serial.println(phototr);
-        makestro.publishKeyValue(topic, "sensor", phototr);
-        Serial.println("publish to cloud");
-    }
 }
