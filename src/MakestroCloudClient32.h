@@ -9,19 +9,18 @@
 //String topic;
 
 class MakestroCloudClient32  {
-public : 
+public :
     MakestroCloudClient32();
     void connect(const char* username, const char* token, const char* project, const char* clientId);
+    bool connected();
     void publish(String topic, String payload);
+    void subscribe(String topic);
     void publishKeyValue(String topic, const char* key, char Valueval);
     void publishData(String topic, String payload);
+    void loop();
+    PubSubClient* data();
 
-/*
 private:
-    const char* username = nullptr;
-    const char* token = nullptr;
-    const char* project = nullptr;
-    const char* clientId = nullptr;
-    const char* topic = nullptr;
-*/
+    PubSubClient* PubSubPtr_ = nullptr;
+
 };
